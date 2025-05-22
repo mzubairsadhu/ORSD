@@ -1,0 +1,215 @@
+@prefix base: <http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess> a owl:Ontology ;
+    rdfs:comment "This ontology is about a Final Year Project process"@en .
+
+base:DesignDocument a owl:Class ;
+    rdfs:subClassOf base:Document .
+
+base:DocumentationQuality a owl:Class ;
+    rdfs:subClassOf base:EvaluationCriterion .
+
+base:FinalReport a owl:Class ;
+    rdfs:subClassOf base:Document .
+
+base:GanttChart a owl:Class ;
+    rdfs:subClassOf base:Document .
+
+base:Innovation a owl:Class ;
+    rdfs:subClassOf base:EvaluationCriterion .
+
+base:Poster a owl:Class ;
+    rdfs:subClassOf base:Document .
+
+base:SRS a owl:Class ;
+    rdfs:subClassOf base:Document .
+
+base:SourceCode a owl:Class ;
+    rdfs:subClassOf base:Document .
+
+base:TechnicalMerit a owl:Class ;
+    rdfs:subClassOf base:EvaluationCriterion .
+
+base:hasDescription a owl:DatatypeProperty ;
+    rdfs:domain base:CapstoneProject ;
+    rdfs:range xsd:string .
+
+base:hasEmail a owl:DatatypeProperty ;
+    rdfs:domain base:Student,
+        base:Supervisor ;
+    rdfs:range xsd:string .
+
+base:hasEndDate a owl:DatatypeProperty ;
+    rdfs:domain base:CapstoneProject ;
+    rdfs:range xsd:dateTime .
+
+base:hasName a owl:DatatypeProperty ;
+    rdfs:domain base:Student,
+        base:Supervisor ;
+    rdfs:range xsd:string .
+
+base:hasProposal a owl:ObjectProperty ;
+    rdfs:domain base:CapstoneProject ;
+    rdfs:range base:Proposal .
+
+base:hasReviewer a owl:ObjectProperty ;
+    rdfs:domain base:CapstoneProject ;
+    rdfs:range base:Reviewer .
+
+base:hasRollNumber a owl:DatatypeProperty ;
+    rdfs:domain base:Student ;
+    rdfs:range xsd:string .
+
+base:hasStartDate a owl:DatatypeProperty ;
+    rdfs:domain base:CapstoneProject ;
+    rdfs:range xsd:dateTime .
+
+base:hasSupervisor a owl:ObjectProperty ;
+    rdfs:domain base:CapstoneProject ;
+    rdfs:range base:Supervisor .
+
+base:hasTitle a owl:DatatypeProperty ;
+    rdfs:domain base:CapstoneProject ;
+    rdfs:range xsd:string .
+
+base:includesDocument a owl:ObjectProperty ;
+    rdfs:domain base:Submission ;
+    rdfs:range base:Document .
+
+base:isForProject a owl:ObjectProperty ;
+    rdfs:domain base:Evaluation ;
+    rdfs:range base:CapstoneProject .
+
+base:isSubmittedBy a owl:ObjectProperty ;
+    rdfs:domain base:Submission ;
+    rdfs:range base:Student .
+
+base:submitsDocument a owl:ObjectProperty ;
+    rdfs:domain base:Student ;
+    rdfs:range base:Submission .
+
+base:ProposalTitleRestriction a owl:Restriction ;
+    owl:cardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onProperty base:proposalTitle .
+
+base:SupervisorHasProposalRestriction a owl:Restriction ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onProperty base:supervisorAssignedTo .
+
+base:belongsToInstitution a owl:ObjectProperty ;
+    rdfs:domain base:CapstoneProject ;
+    rdfs:range base:Institution .
+
+base:evaluates a owl:ObjectProperty ;
+    rdfs:domain base:Reviewer ;
+    rdfs:range base:Evaluation .
+
+base:evaluatesCriterion a owl:ObjectProperty ;
+    rdfs:domain base:Evaluation ;
+    rdfs:range base:EvaluationCriterion .
+
+base:hasDeliverable a owl:ObjectProperty ;
+    rdfs:domain base:CapstoneProject ;
+    rdfs:range base:Document .
+
+base:hasEvaluationCriterion a owl:ObjectProperty ;
+    rdfs:domain base:CapstoneProject ;
+    rdfs:range base:EvaluationCriterion .
+
+base:hasGrade a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:domain base:Evaluation,
+        base:EvaluationCriterion ;
+    rdfs:range base:Grade,
+        xsd:float .
+
+base:hasPhase a owl:ObjectProperty ;
+    rdfs:domain base:CapstoneProject ;
+    rdfs:range base:ProjectPhase .
+
+base:hasStudent a owl:ObjectProperty ;
+    rdfs:domain base:CapstoneProject ;
+    rdfs:range base:Student .
+
+base:proposalTitle a owl:DatatypeProperty ;
+    rdfs:domain base:Proposal ;
+    rdfs:range xsd:string .
+
+base:supervisorAssignedTo a owl:ObjectProperty ;
+    rdfs:domain base:Supervisor ;
+    rdfs:range base:Proposal .
+
+base:Grade a owl:Class .
+
+base:Institution a owl:Class .
+
+base:ProjectPhase a owl:Class .
+
+base:Reviewer a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass base:Evaluation ;
+            owl:onProperty base:evaluates ],
+        base:Person .
+
+base:hasCoordinator a owl:ObjectProperty ;
+    rdfs:domain base:CapstoneProject ;
+    rdfs:range base:AcademicCoordinator .
+
+base:AcademicCoordinator a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass base:AcademicCoordinator ;
+            owl:onProperty base:hasCoordinator ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+base:Person a owl:Class .
+
+base:Proposal a owl:Class ;
+    rdfs:subClassOf base:ProposalTitleRestriction .
+
+base:Submission a owl:Class .
+
+base:Supervisor a owl:Class ;
+    rdfs:subClassOf base:Person,
+        base:SupervisorHasProposalRestriction .
+
+base:Evaluation a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty base:evaluatesCriterion ;
+            owl:someValuesFrom base:EvaluationCriterion ] .
+
+base:Student a owl:Class ;
+    rdfs:subClassOf base:Person .
+
+base:EvaluationCriterion a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty base:hasGrade ;
+            owl:someValuesFrom base:Grade ] .
+
+base:Document a owl:Class .
+
+base:CapstoneProject a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty base:hasDeliverable ;
+            owl:someValuesFrom base:Document ],
+        [ a owl:Restriction ;
+            owl:onProperty base:hasEvaluationCriterion ;
+            owl:someValuesFrom base:EvaluationCriterion ],
+        [ a owl:Restriction ;
+            owl:onProperty base:hasPhase ;
+            owl:someValuesFrom base:ProjectPhase ],
+        [ a owl:Restriction ;
+            owl:onProperty base:hasStudent ;
+            owl:someValuesFrom base:Student ],
+        [ a owl:Restriction ;
+            owl:onClass base:Institution ;
+            owl:onProperty base:belongsToInstitution ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass base:AcademicCoordinator ;
+            owl:onProperty base:hasCoordinator ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+

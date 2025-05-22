@@ -1,0 +1,559 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess#"
+     xml:base="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:base="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess">
+        <rdfs:comment xml:lang="en">This ontology is about a Final Year Project process</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#cardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#cardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/belongsToInstitution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/belongsToInstitution">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Institution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/evaluates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/evaluates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Reviewer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Evaluation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/evaluatesCriterion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/evaluatesCriterion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Evaluation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/EvaluationCriterion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasCoordinator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasCoordinator">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/AcademicCoordinator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasDeliverable -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasDeliverable">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasEvaluationCriterion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasEvaluationCriterion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/EvaluationCriterion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasGrade -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasGrade">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Evaluation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/EvaluationCriterion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Grade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasPhase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasPhase">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/ProjectPhase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasProposal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasProposal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Proposal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasReviewer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasReviewer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasStudent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasStudent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasSupervisor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasSupervisor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Supervisor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/includesDocument -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/includesDocument">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Submission"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/isForProject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/isForProject">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Evaluation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/isSubmittedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/isSubmittedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Submission"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/submitsDocument -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/submitsDocument">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Submission"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/supervisorAssignedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/supervisorAssignedTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Supervisor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Proposal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasEmail">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Student"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Supervisor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasEndDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasGrade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasGrade">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Student"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Supervisor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasRollNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasRollNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasStartDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/proposalTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/proposalTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Proposal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/AcademicCoordinator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/AcademicCoordinator">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasCoordinator"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/AcademicCoordinator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/CapstoneProject">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasDeliverable"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Document"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasEvaluationCriterion"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/EvaluationCriterion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasPhase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/ProjectPhase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasStudent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Student"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/belongsToInstitution"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Institution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasCoordinator"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/AcademicCoordinator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/DesignDocument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/DesignDocument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Document"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/DocumentationQuality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/DocumentationQuality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/EvaluationCriterion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Evaluation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Evaluation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/evaluatesCriterion"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/EvaluationCriterion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/EvaluationCriterion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/EvaluationCriterion">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/hasGrade"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Grade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/FinalReport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/FinalReport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/GanttChart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/GanttChart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Grade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Grade"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Innovation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Innovation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/EvaluationCriterion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Institution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Institution"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Poster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Poster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/ProjectPhase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/ProjectPhase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Proposal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Proposal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/ProposalTitleRestriction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/ProposalTitleRestriction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/ProposalTitleRestriction">
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Reviewer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Reviewer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/evaluates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Evaluation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/SRS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/SRS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/SourceCode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/SourceCode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Submission -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Submission"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Supervisor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Supervisor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/Person"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/SupervisorHasProposalRestriction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/SupervisorHasProposalRestriction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/SupervisorHasProposalRestriction">
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/TechnicalMerit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/TechnicalMerit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asifcomputer/ontologies/2025/3/admissionprocess/EvaluationCriterion"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
